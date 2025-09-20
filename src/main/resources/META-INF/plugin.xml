@@ -1,0 +1,17 @@
+<idea-plugin>
+    <id>io.github.marattim.jetbrains-vacuum-plugin</id>
+    <name>Vacuum OpenApi Linter</name>
+    <vendor url="https://github.com/Marat-Tim/VacuumJetbrainsPlugin">Marat Tim</vendor>
+    <description><![CDATA[
+        Automatically runs
+        <a href="https://quobix.com/vacuum/commands/language-server/">vacuum language server</a>
+        on openapi files
+    ]]></description>
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <change-notes>
+        Initial version
+    </change-notes>
+</idea-plugin>
