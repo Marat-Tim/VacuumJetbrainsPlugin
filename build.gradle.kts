@@ -18,7 +18,6 @@ dependencies {
     intellijPlatform {
         create("IC", "2025.1.4.1")
         testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
-        plugin("com.redhat.devtools.lsp4ij:0.16.1")
     }
 }
 

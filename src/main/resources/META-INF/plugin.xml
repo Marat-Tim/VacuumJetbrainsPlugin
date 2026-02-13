@@ -3,23 +3,18 @@
     <name>Vacuum OpenApi Linter</name>
     <vendor url="https://github.com/Marat-Tim">Marat Tim</vendor>
     <description><![CDATA[
-        Automatically runs
-        <a href="https://quobix.com/vacuum/commands/language-server/">vacuum language server</a>
-        on openapi files
+        Integration with
+        <a href="https://github.com/daveshanley/vacuum">vacuum</a>
+        to lint openapi files
     ]]></description>
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.redhat.devtools.lsp4ij</depends>
-    <extensions defaultExtensionNs="com.redhat.devtools.lsp4ij">
-        <server id="vacuum"
-                name="Vacuum"
-                factoryClass="io.github.marattim.vacuumjetbrainsplugin.VacuumLanguageServerFactory">
-            <description><![CDATA[
-                Vacuum language server, see <a href="https://quobix.com/vacuum/commands/language-server/">documentation</a>
-            ]]></description>
-        </server>
-        <fileNamePatternMapping patterns="*.yaml;*.yml;*.json"
-                                serverId="vacuum"
-                                languageId="openapi"/>
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable
+                instance="io.github.marattim.vacuumjetbrainsplugin.VacuumSettingsConfigurable"
+                id="io.github.marattim.vacuum.settings"
+                displayName="Vacuum"
+                parentId="tools"
+        />
     </extensions>
     <change-notes>
         Initial version
