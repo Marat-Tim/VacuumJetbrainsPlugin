@@ -2,7 +2,6 @@ package io.github.marattim.vacuumjetbrainsplugin;
 
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.PersistentStateComponent;
-import com.intellij.openapi.components.RoamingType;
 import com.intellij.openapi.components.Service;
 import com.intellij.openapi.components.State;
 import com.intellij.openapi.components.Storage;
@@ -10,7 +9,7 @@ import com.intellij.openapi.components.Storage;
 @Service(Service.Level.APP)
 @State(
         name = "VacuumSettings",
-        storages = @Storage(value = "vacuum.xml", roamingType = RoamingType.DISABLED)
+        storages = @Storage(value = "vacuum.xml")
 )
 public final class VacuumSettings implements PersistentStateComponent<VacuumSettings.State> {
     private State state = new State();

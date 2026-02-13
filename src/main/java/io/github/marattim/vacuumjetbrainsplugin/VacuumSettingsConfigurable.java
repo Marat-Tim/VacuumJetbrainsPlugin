@@ -9,10 +9,8 @@ import com.intellij.openapi.ui.TextBrowseFolderListener;
 import com.intellij.openapi.ui.TextFieldWithBrowseButton;
 import com.intellij.util.ui.JBUI;
 import org.jetbrains.annotations.Nls;
-import org.jspecify.annotations.Nullable;
 
 public class VacuumSettingsConfigurable implements Configurable {
-    private @Nullable JPanel panel;
     private TextFieldWithBrowseButton vacuumPathField;
     private JTextField additionalArgsField;
     private VacuumSettings.State state;
@@ -27,7 +25,7 @@ public class VacuumSettingsConfigurable implements Configurable {
     public JComponent createComponent() {
         state = VacuumSettings.getInstance().getState();
 
-        panel = new JPanel(new BorderLayout());
+        JPanel panel = new JPanel(new BorderLayout());
         JPanel content = new JPanel(new GridBagLayout());
         panel.add(content, BorderLayout.NORTH);
         panel.add(new JPanel(), BorderLayout.CENTER);
@@ -91,11 +89,6 @@ public class VacuumSettingsConfigurable implements Configurable {
     public void reset() {
         vacuumPathField.setText(state.vacuumPath());
         additionalArgsField.setText(state.additionalArgs());
-    }
-
-    @Override
-    public void disposeUIResources() {
-        panel = null;
     }
 
 }
