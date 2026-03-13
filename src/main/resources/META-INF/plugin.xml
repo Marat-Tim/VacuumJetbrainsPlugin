@@ -12,7 +12,8 @@
         <applicationConfigurable
                 instance="io.github.marattim.vacuumjetbrainsplugin.VacuumSettingsConfigurable"
                 id="io.github.marattim.vacuum.settings"
-                displayName="Vacuum"
+                bundle="VacuumBundle"
+                key="plugin.name"
                 parentId="tools"
         />
     </extensions>
