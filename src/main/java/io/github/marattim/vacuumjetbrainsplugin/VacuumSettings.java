@@ -12,14 +12,14 @@ import com.intellij.openapi.components.Storage;
         storages = @Storage(value = "vacuum.xml")
 )
 public final class VacuumSettings implements PersistentStateComponent<VacuumSettings.State> {
-    private State state = new State();
+    private VacuumSettings.State state = new VacuumSettings.State();
 
     public static VacuumSettings getInstance() {
         return ApplicationManager.getApplication().getService(VacuumSettings.class);
     }
 
     @Override
-    public State getState() {
+    public VacuumSettings.State getState() {
         return state;
     }
 

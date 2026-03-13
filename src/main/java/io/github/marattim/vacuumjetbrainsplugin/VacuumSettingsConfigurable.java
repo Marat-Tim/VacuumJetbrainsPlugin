@@ -8,6 +8,7 @@ import com.intellij.openapi.options.Configurable;
 import com.intellij.openapi.ui.TextBrowseFolderListener;
 import com.intellij.openapi.ui.TextFieldWithBrowseButton;
 import com.intellij.util.ui.JBUI;
+import com.uber.nullaway.annotations.Initializer;
 import org.jetbrains.annotations.Nls;
 
 public class VacuumSettingsConfigurable implements Configurable {
@@ -21,6 +22,7 @@ public class VacuumSettingsConfigurable implements Configurable {
         return "Vacuum";
     }
 
+    @Initializer
     @Override
     public JComponent createComponent() {
         state = VacuumSettings.getInstance().getState();
@@ -42,7 +44,7 @@ public class VacuumSettingsConfigurable implements Configurable {
         gbc.gridx = 1;
         gbc.weightx = 1.0;
         vacuumPathField = new TextFieldWithBrowseButton();
-        vacuumPathField.addBrowseFolderListener(new TextBrowseFolderListener(FileChooserDescriptorFactory.createSingleFileDescriptor()));
+        vacuumPathField.addBrowseFolderListener(new TextBrowseFolderListener(FileChooserDescriptorFactory.singleFile()));
         vacuumPathField.setText(state.vacuumPath());
         content.add(vacuumPathField, gbc);
 
