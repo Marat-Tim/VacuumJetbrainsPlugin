@@ -39,7 +39,7 @@ public final class VacuumSettings implements PersistentStateComponent<VacuumSett
         }
 
         public State() {
-            this("", "");
+            this("vacuum", "-dx --abs-paths");
         }
 
         public String vacuumPath() {

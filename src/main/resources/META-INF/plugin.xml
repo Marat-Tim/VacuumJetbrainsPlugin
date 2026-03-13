@@ -17,6 +17,13 @@
                 parentId="tools"
         />
     </extensions>
+    <depends>org.jetbrains.plugins.terminal</depends>
+    <actions>
+        <action class="io.github.marattim.vacuumjetbrainsplugin.RunVacuumLintOnFile"
+                text="Run Vacuum Lint On File">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+        </action>
+    </actions>
     <change-notes>
         Initial version
     </change-notes>

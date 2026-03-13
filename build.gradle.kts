@@ -24,6 +24,7 @@ dependencies {
     compileOnly("com.uber.nullaway:nullaway-annotations:0.13.1")
     implementation("org.jspecify:jspecify:1.0.0")
     intellijPlatform {
+        bundledPlugin("org.jetbrains.plugins.terminal")
         create("IC", "2025.1.4.1")
         testFramework(org.jetbrains.intellij.platform.gradle.TestFrameworkType.Platform)
     }
@@ -32,7 +33,7 @@ dependencies {
 intellijPlatform {
     pluginConfiguration {
         ideaVersion {
-            sinceBuild = "252"
+            sinceBuild = "251"
         }
     }
 }
