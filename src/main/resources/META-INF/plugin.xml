@@ -18,9 +18,9 @@
         />
     </extensions>
     <depends>org.jetbrains.plugins.terminal</depends>
-    <actions>
-        <action class="io.github.marattim.vacuumjetbrainsplugin.RunVacuumLintOnFile"
-                text="Run Vacuum Lint On File">
+    <actions resource-bundle="VacuumBundle">
+        <action id="io.github.marattim.vacuumjetbrainsplugin.RunVacuumLintOnFile"
+                class="io.github.marattim.vacuumjetbrainsplugin.RunVacuumLintOnFile">
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
         </action>
     </actions>
