@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>io.github.marattim.jetbrains-vacuum-plugin</id>
-    <name>Vacuum OpenApi Linter</name>
+    <name>Vacuum OpenAPI Linter</name>
     <vendor url="https://github.com/Marat-Tim">Marat Tim</vendor>
     <description><![CDATA[
         Integration with
